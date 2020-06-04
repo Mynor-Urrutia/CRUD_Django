@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% block content %}
+
+    <h1>Productos</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre del Productos</th>
+                <th scope="col">Proveedor del Producto</th>
+                <th scope="col">Cantidad Ingresada</th>
+                <th scope="col">Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for productos in producto %}
+            <tr>
+                <td>{{ productos.nombreProducto }}</td>
+                <td>{{ productos.proveedorProducto }}</td>
+                <td>{{ productos.fechaProducto }}</td>
+                <td><a href="" class="btn btn-warning">Editar</a> <a href="" class="btn btn-danger">Eliminar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

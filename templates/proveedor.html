@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block content %}
+    <h1>Proveedores</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre del Proveedor</th>
+                <th scope="col">NIT</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Correo Electronico</th>
+                <th scope="col">Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for proveedor in proveedor %}
+            <tr>
+                <td>{{ proveedor.nombreProveedor }}</td>
+                <td>{{ proveedor.nitProveedor }}</td>
+                <td>{{ proveedor.direccionProveedor }}</td>
+                <td>{{ proveedor.telefonoProveedor }}</td>
+                <td>{{ proveedor.correoProveedor }}</td>
+                <td><a href="" class="btn btn-warning">Editar</a> <a href="" class="btn btn-danger">Eliminar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

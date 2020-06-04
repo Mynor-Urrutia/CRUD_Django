@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block content %}
+    <h1>Clientes</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre Cliente</th>
+                <th scope="col">NIT</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Correo Electronico</th>
+                <th scope="col">Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for clientes in clientes %}
+            <tr>
+                <td>{{ clientes.nombreCliente }}</td>
+                <td>{{ clientes.nitCliente }}</td>
+                <td>{{ clientes.direccionCliente }}</td>
+                <td>{{ clientes.telefonoCliente }}</td>
+                <td>{{ clientes.correoCliente }}</td>
+                <td><a href="" class="btn btn-warning">Editar</a> <a href="" class="btn btn-danger">Eliminar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

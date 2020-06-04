@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block content %}
+    <h1>Personal</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre del Personal</th>
+                <th scope="col">NIT</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Correo Electronico</th>
+                <th scope="col">Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for personals in personals %}
+            <tr>
+                <td>{{ personals.nombrePersonal }}</td>
+                <td>{{ personals.nitPersonal }}</td>
+                <td>{{ personals.direccionPersonal }}</td>
+                <td>{{ personals.telefonoPersonal }}</td>
+                <td>{{ personals.correoPersonal }}</td>
+                <td><a href="" class="btn btn-warning">Editar</a> <a href="" class="btn btn-danger">Eliminar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

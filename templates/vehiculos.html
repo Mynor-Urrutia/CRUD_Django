@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block content %}
+    <h1>Vehiculos</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Marca del Vehiculo</th>
+                <th scope="col">Modelo del Vehiculo</th>
+                <th scope="col">Placa Vehiculo</th>
+                <th scope="col">Persona a Cargo</th>
+                <th scope="col">Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vehiculos in vehiculo %}
+            <tr>
+                <td>{{ vehiculos.marcaVehiculo }}</td>
+                <td>{{ vehiculos.modeloVehiculo }}</td>
+                <td>{{ vehiculos.placaVehiculo }}</td>
+                <td>{{ vehiculos.personalVehiculo }}</td>
+                <td><a href="" class="btn btn-warning">Editar</a> <a href="" class="btn btn-danger">Eliminar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
